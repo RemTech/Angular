@@ -1,0 +1,12 @@
+.picsum-img-wrapper {
+    width:15dvw;
+    height:35dvw;
+    padding:top 0.5em;
+    padding-bottom:0.5em;
+    padding-left:0.1%;
+    padding-right:0.1%;
+}
+.line {
+  color: white;  
+  font-size:25px;
+}
