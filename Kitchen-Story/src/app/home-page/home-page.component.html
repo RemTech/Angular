@@ -1,0 +1,49 @@
+
+<!-- Header - set the background image for the header in the line below-->
+<header class="py-3 bg-image-medium" style="background-image: url('./assets/background1.jpg')">
+    
+<!-- Ngbcarousel -->
+    <ngb-carousel [pauseOnFocus]=false [interval]=2000 [pauseOnHover]=false cycle=cycle() >
+        <ng-template ngbSlide *ngFor="let picture of pictures" >
+            <div class="picsum-img-wrapper" >
+                <!--  carousel-wrapper-->
+                <img src="{{picture.name}}" alt="{{picture.caption}}"/>
+            </div>
+            <div class="carousel-caption">
+                <!-- <h3>First slide label</h3> -->
+                <h2><b><i>{{picture.caption}}</i></b></h2>
+                <p class="line"><i>Farm Fresh to Kitchen is What We Do Best</i></p>
+            </div>
+        </ng-template>
+    </ngb-carousel>   
+</header>
+
+ <!-- Content section-->
+  <section class="py-3 bg-image-full">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2> Quality Organic Food </h2>
+                <p class="lead">At {{company.name}} We pride Ourselves In the Quality Of Foods Supplied To Customers</p>
+                <p class="mb-0">Our belief is about quality food for a healthy lifestyle.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Image element - set the background image for the header in the line below-->
+<div class="py-5 bg-image-full" style="background-image: url('./assets/background1.jpg')">
+    <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+    <div style="height: 20rem"></div>
+</div>
+<!-- Content section-->
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>Engaging Background Images</h2>
+                <p class="lead">The background images used in this template are sourced from Unsplash and are open source and free to use.</p>
+                <p class="mb-0">I can't tell you how many people say they were turned off from science because of a science teacher that completely sucked out all the inspiration and enthusiasm they had for the course.</p>
+            </div>
+        </div>
+    </div>
+</section>

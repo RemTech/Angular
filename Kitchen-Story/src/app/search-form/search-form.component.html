@@ -1,0 +1,65 @@
+
+<!--Navbar
+<nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand"><b>Kitchen-Story</b></a>
+      <div class="d-flex ">
+      <form class="d-flex input-group w-auto">
+        <input
+          type="search"
+          class="form-control rounded"
+          placeholder="Search Food Item(s)"
+          aria-label="Search"
+          aria-describedby="search-addon"
+        />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"><button class="btn-primary" id="sF" name="searchFood">Search</button></i>
+        </span>
+      </form>
+    </div>
+  </nav>
+  class="btn btn-outline-success"
+  Navbar-->
+  <!-- Navbar-->
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">Kitchen-Story</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="">Admin Login</a>   
+            <!-- routerLink="" routerLinkActive="" -->
+          </li>
+          
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu ">
+              <li><a class="dropdown-item" href="">About</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="">Contact</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="">Products</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <form class="d-flex" role="search" #find="ngForm" (ngSubmit)="getProductFromDB(find)">  <!-- getSearchText(find) Use to debug data sent if having issues -->
+          <input class="form-control me-2" type="search" placeholder="Search For Food Item(s)" aria-label="Search" required minlength="3" maxlength="7" [(ngModel)]="foodItem.food" #firstName="ngModel" name="firstName" /> 
+          <button type="submit" [disabled]="firstName.invalid"><fa-icon [icon]="faCheck"></fa-icon></button>
+        </form>
+          <!-- <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger">
+          3 Letters & above
+        </div>  -->
+        <!-- {{findText | json}} --> 
+      </div>
+    </div>
+  </nav>
+  
