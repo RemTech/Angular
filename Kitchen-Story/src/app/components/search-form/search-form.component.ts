@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faSquare, faPersonCircleCheck,faCheck } from '@fortawesome/free-solid-svg-icons';
-import { SearchServiceService } from '../services/search-service.service';
+import { SearchServiceService } from '../../injector/services/search-service.service';
 
 @Component({
   selector: 'app-search-form',
