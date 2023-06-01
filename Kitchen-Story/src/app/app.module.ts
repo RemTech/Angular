@@ -15,6 +15,7 @@ import { FooterPageComponent } from './components/footer-page/footer-page.compon
 import { NgbModule,NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchServiceService } from './injector/services/search-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ForgotPasswordComponent } from './components/forgot.password/forgot.password.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     ConfirmationPageComponent,
     AdminLoginComponent,
     SummaryPageComponent,
-    FooterPageComponent
+    FooterPageComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

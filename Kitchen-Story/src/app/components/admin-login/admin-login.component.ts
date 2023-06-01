@@ -32,6 +32,11 @@ export class AdminLoginComponent {
   /** method for verification to see values being sent*/
    verify():any{
     console.warn(this.groupForm.value);
+    this.clearCredentials();
+   }
+   /** function to clear input fields in admin page */
+   clearCredentials():any{
+    return this.groupForm.reset();
    }
 
 }

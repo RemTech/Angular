@@ -52,6 +52,7 @@
           </li>
         </ul>
         
+        <!-- template driven form -->
         <form class="d-flex" role="search" #find="ngForm" (ngSubmit)="getProductFromDB(find)">  <!-- getSearchText(find) Use to debug data sent if having issues -->
           <input class="form-control me-2" type="search" placeholder="Search For Food Item(s)" aria-label="Search" required minlength="3" maxlength="7" [(ngModel)]="foodItem.food" #firstName="ngModel" name="firstName" /> 
           <button type="submit" [disabled]="firstName.invalid"><fa-icon [icon]="faCheck"></fa-icon></button>
