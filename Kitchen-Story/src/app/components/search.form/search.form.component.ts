@@ -6,8 +6,8 @@ import { SearchServiceService } from '../../injector/services/search-service.ser
 
 @Component({
   selector: 'app-search-form',
-  templateUrl: './search-form.component.html',
-  styleUrls: ['./search-form.component.css'],
+  templateUrl: './search.form.component.html',
+  styleUrls: ['./search.form.component.css'],
   providers:[SearchServiceService]
 })
 export class SearchFormComponent implements OnInit {
@@ -23,14 +23,10 @@ export class SearchFormComponent implements OnInit {
       price:"",
     };
   }
-
-  /* icons on template */ 
-  faCoffee:any=faCoffee;
-  faSquare:any=faSquare;
-  faPersonCircleCheck:any=faPersonCircleCheck;
-  faCheck:any=faCheck;
-
-  /*datas=data; This displays object in the text field on the screen */
+     
+  /** icon array for fontawesome library of icons. Added to array include and use on template */
+   pics:any[]=[faCoffee,faSquare,faPersonCircleCheck,faCheck];
+  
 
   // search text method to test data sent
     getSearchText(find:any):any{
@@ -61,8 +57,3 @@ interface Data{
   productName:string;
 }
 
-/** implementation of Data interface 
-const data:Data[]=[
-  {productName:""},
-]
-*/

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SummaryPageComponent } from './summary-page.component';
+import { FooterPageComponent } from './footer.page.component';
 
-describe('SummaryPageComponent', () => {
-  let component: SummaryPageComponent;
-  let fixture: ComponentFixture<SummaryPageComponent>;
+describe('FooterPageComponent', () => {
+  let component: FooterPageComponent;
+  let fixture: ComponentFixture<FooterPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SummaryPageComponent ]
+      declarations: [ FooterPageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SummaryPageComponent);
+    fixture = TestBed.createComponent(FooterPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

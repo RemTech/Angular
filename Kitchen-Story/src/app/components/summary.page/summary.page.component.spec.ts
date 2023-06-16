@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchFormComponent } from './search-form.component';
+import { SummaryPageComponent } from './summary.page.component';
 
-describe('SearchFormComponent', () => {
-  let component: SearchFormComponent;
-  let fixture: ComponentFixture<SearchFormComponent>;
+describe('SummaryPageComponent', () => {
+  let component: SummaryPageComponent;
+  let fixture: ComponentFixture<SummaryPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchFormComponent ]
+      declarations: [ SummaryPageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SearchFormComponent);
+    fixture = TestBed.createComponent(SummaryPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
