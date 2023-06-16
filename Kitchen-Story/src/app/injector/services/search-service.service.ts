@@ -7,38 +7,37 @@ import { Router } from '@angular/router';
 })
 
 /** this service is for Search Component service */
-export class SearchServiceService {
+export class SearchServiceService implements OnInit {
  
- public url!:URL;
+  url!:URL;
  public responseType!:ResponseType;
 
-  constructor(private http:HttpClient,private route:Router) {}
+  constructor(private http:HttpClient,private route:Router) {};
+
+  ngOnInit(): void {
+     this.url={
+      URI0:'http//localhost:7180/getProducts',
+      http_method0:'GET',
+      URI1:'http//localhost:7180/postProducts',
+      http_method1:'POST',
+     }
+  }
     
    /** get Products function */
    getProducts(data:any):any{
-    for(let i=0; i<this.url.URI.length; i++){
-      if(this.url.http_method.match('GET') && this.url.URI.endsWith('getProducts')){
-        if(this.http.get(this.url.URI[i],data)==null){
-          this.route.navigate(['/products']);
-        }    
+      if(this.url.URI0.includes('getProducts')){
+         if(this.http.get(this.url.URI0)!= null){
+             return this.route.navigateByUrl('productpage');
+         }   
       }
       else{
-             this.route.navigate(['/noproducts']);
-         /** window.alert('endpoint not found');  BOM object 
-          console.log('End point Not Found'); **/
+            return this.route.navigate(['/noproducts']);  /** TODO: to develop the noproduct component */
       }
     }
    }
    
-}
- 
-/** HTTP Methods URL for REST Services */
-const url:URL[]=[
-  {URI:'http//localhost:7180/getProducts',http_method:'GET'},
-  {URI:'http//localhost:7180/postProducts',http_method:'POST'}
-]
-
+ /** model for URL(s) */
 export interface URL{
-  URI:string;
-  http_method:string;
+  URI0:string; URI1:string;
+  http_method0:string;http_method1:string;
 }
